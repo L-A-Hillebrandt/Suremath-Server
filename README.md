@@ -1,2 +1,3 @@
-# Suremath-Server
-Server side for the Suremath math e-learning application.
+# Suremath Server
+
+Server side for the internet feature of Suremath, made with node.js and Express.

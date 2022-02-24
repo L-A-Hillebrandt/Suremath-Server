@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "better-sqlite3": "^7.4.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  },
+  "name": "suremath-server",
+  "description": "Server side for the internet feature of Suremath, made with node.js and Express.",
+  "version": "1.0.0",
+  "main": "Main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:less": "lessc style/templates/style.less public/style/style.css",
+    "prestart": "npm run build:less",
+    "start": "node Main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/L-A-Hillebrandt/Suremath-Server.git"
+  },
+  "author": "Lennart Hillebrandt",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^4.1.2"
+  }
+}

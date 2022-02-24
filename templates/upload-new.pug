@@ -1,0 +1,24 @@
+doctype html
+html(lang='de')
+    head
+        title Neue Aufgabe hochladen
+        link(rel='stylesheet' href="style/style.css")
+    body
+        div.header
+            p Neue Aufgabe hochladen
+        if created
+            div.createdBanner
+                p Aufgabe erstellt um #{created.timeStamp}: Titel: #{created.title}, Autor: #{created.author}, Fakultät: #{created.faculty}
+        if error
+            div.error
+                p Es ist ein Fehler aufgetreten: #{error}
+        form(action="/upload-new", method="post", enctype="multipart/form-data")
+            label(for="title") Titel:
+            input(type="text" id="title" name="title")
+            label(for="author") Autor:
+            input(type="text" id="author" name="author")
+            label(for="faculty") Fakultät:
+            input(type="text" id="faculty" name="faculty")
+            label(for="file") Datei:
+            input(type="file" id="file" name="file" accept=".suremath")
+            input(type="submit" value="Abschicken")

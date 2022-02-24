@@ -1,0 +1,31 @@
+doctype html
+html(lang='de')
+    head
+        title Liste der Aufgaben
+        link(rel='stylesheet' href="style/style.css")
+        script(src="scripts/list.js")
+    body
+        div.header 
+            p Liste der Aufgaben
+        if error
+            div.error
+                p Es ist ein Fehler aufgetreten: #{error}
+        table
+            thead
+                tr
+                    th ID
+                    th Titel
+                    th Autor
+                    th Fakultät
+                    th Dateiname
+                    th
+            tbody
+                each exercise in exercises
+                    tr
+                        td #{exercise.exercise_id}
+                        td #{exercise.title}
+                        td #{exercise.author}
+                        td #{exercise.faculty}
+                        td #{exercise.fileName}
+                        td
+                            button(onclick="deleteExercise(" + exercise.exercise_id + ")") Löschen
